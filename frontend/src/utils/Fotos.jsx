@@ -13,4 +13,5 @@ const imageArray = [ChicagoBulls,
   Warriors02
 ];
 
+
 export default imageArray
