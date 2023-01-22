@@ -12,11 +12,11 @@ export default function Cards() {
       </p>
 
       <div className="mx-5 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {imageArray.map((image, index) => (
-          <div key={index} className="rounded-sm overflow-hidden shadow shadow-slate-200">
-            <img className="object-cover h-64 w-full rounded" src={image} alt={`Image ${index + 1}`} />
+        {imageArray.map((imageArray, index) => (
+          <div key={imageArray.image} className="rounded-sm overflow-hidden shadow shadow-slate-200">
+            <img className="object-cover h-64 w-full rounded" src={imageArray.image} alt={`Image ${index + 1}`} />
             <div class="flex flex-col item-center justify-between m-3">
-              <h1 class="text-gray-700 font-bold text-xl">Peita NBA</h1>
+              <h1 class="text-gray-700 font-bold text-xl">{imageArray.Description}</h1>
               <a className="mt-1 flex 
                 items-center tracking-wide no-underline 
                 hover:no-underline text-green-500 transition

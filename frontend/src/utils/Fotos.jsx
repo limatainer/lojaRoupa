@@ -5,13 +5,30 @@ import TSquad from '../assets/img/TSquad.png';
 import Warriors01 from '../assets/img/Warriors01.png';
 import Warriors02 from '../assets/img/Warrios02.png';
 
-const imageArray = [ChicagoBulls,
-  Lakers01,
-  Lakers02,
-  TSquad,
-  Warriors01,
-  Warriors02
-];
+const imageArray = [{
+  image: ChicagoBulls,
+  Description: "Camisa Chicago"
+},
+{
+  image: Lakers01,
+  Description: "Camisa Lakers"
+},
+{
+  image: Lakers02,
+  Description: "Camisa Lakers"
+},
+{
+  image: TSquad,
+  Description: "Camisa TSquad"
+},
+{
+  image: Warriors01,
+  Description: "Camisa Warriors"
+},
+{
+  image: Warriors02,
+  Description: "Camisa Warriors"
+}]
 
 
 export default imageArray
