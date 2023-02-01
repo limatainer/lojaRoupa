@@ -3,8 +3,8 @@ import tamanhos from '../assets/img/Tamanhos.png'
 
 export default function Jumbottron() {
   return (
-    <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-      <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+    <div className="container flex flex-col justify-center  shadow shadow-slate-500 rounded-md p-3 mt-3 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+      <div className="flex flex-col justify-center p-6 text-center  lg:max-w-md xl:max-w-lg lg:text-left">
 
         <h3 className='text-xl font-bold leading-none sm:text-3xl'>Tamanhos de nossas camisas</h3>
         <p className="mt-6 mb-8 text-lg sm:mb-12">Medidas aproximadas, podendo haver variação de 4cm -
