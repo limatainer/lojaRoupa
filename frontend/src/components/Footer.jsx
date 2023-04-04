@@ -1,75 +1,49 @@
-import React from 'react'
-import Logo from '../assets/img/Logo.svg'
+import React from 'react';
+import Logo from '/vite.svg';
 export default function Footer() {
   return (
-    <footer aria-label="NBA Footer" className="bg-gray-100">
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+    <footer aria-label="Footer" className="bg-gray-100">
+      <div className="mx-auto max-w-xl px-2 py-4 sm:px-6 lg:px-4">
         <div className="flex justify-center text-teal-600">
-          <a href="https://www.instagram.com/peitanba/?hl=pt"
-            target="_blank" rel="noopener noreferrer">
-            <img src={Logo} className="h-14" alt="PeitaNBA" />
-
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src={Logo} className="h-14" alt="loja" />
           </a>
         </div>
 
-        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-          Nos siga no Instagram e confira nossas novidades por lá também
+        <p
+          className="mx-auto mt-6 max-w-md text-center leading-relaxed
+         text-gray-500"
+        >
+          Check out our Instagram too
         </p>
-
-        {/* <nav aria-label="Footer Nav" className="mt-12">
-          <ul className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-            <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                About
-              </a>
-            </li>
-
-            <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                Careers
-              </a>
-            </li>
-
-            <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                History
-              </a>
-            </li>
-
-            <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                Services
-              </a>
-            </li>
-
-            <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                Projects
-              </a>
-            </li>
-
-            <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                Blog
-              </a>
-            </li>
-          </ul>
-        </nav> */}
 
         <ul className="mt-12 flex justify-center gap-6 md:gap-8">
           <li>
-            <a className="text-gray-700 transition
-             hover:text-gray-700/75" href="https://wa.me/+558197749021"
-              target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-whatsapp" viewBox="0 0 16 16">
+            <a
+              className="text-gray-700 transition
+             hover:text-gray-700/75"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                className="bi bi-whatsapp"
+                viewBox="0 0 16 16"
+              >
                 <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-              </svg></a>
+              </svg>
+            </a>
           </li>
 
           <li>
             <a
-              href="https://www.instagram.com/peitanba/?hl=pt"
-              target="_blank" rel="noopener noreferrer"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-700 transition hover:text-gray-700/75"
             >
               <span className="sr-only">Instagram</span>
@@ -89,12 +63,12 @@ export default function Footer() {
           </li>
           <li>
             <a
-              href="https://www.nba.com/"
+              href="#"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"
             >
-              <span className="sr-only">NBA</span>
+              <span className="sr-only">Others</span>
               <svg
                 className="h-6 w-6"
                 fill="currentColor"
@@ -109,55 +83,8 @@ export default function Footer() {
               </svg>
             </a>
           </li>
-          {/* <li>
-            <a
-              href="/"
-              rel="noreferrer"
-              target="_blank"
-              className="text-gray-700 transition hover:text-gray-700/75"
-            >
-              <span className="sr-only">Twitter</span>
-              <svg
-                className="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-                />
-              </svg>
-            </a>
-          </li> */}
-
-          {/* <li>
-            <a
-              href="/"
-              rel="noreferrer"
-              target="_blank"
-              className="text-gray-700 transition hover:text-gray-700/75"
-            >
-              <span className="sr-only">GitHub</span>
-              <svg
-                className="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </a>
-          </li> */}
-
-
         </ul>
       </div>
     </footer>
-
-
-  )
+  );
 }

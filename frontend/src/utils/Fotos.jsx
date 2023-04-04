@@ -1,34 +1,45 @@
-import ChicagoBulls from '../assets/img/ChicagoBulls.png';
-import Lakers01 from '../assets/img/Lakers01.png';
-import Lakers02 from '../assets/img/Lakers02.png';
-import TSquad from '../assets/img/TSquad.png';
-import Warriors01 from '../assets/img/Warriors01.png';
-import Warriors02 from '../assets/img/Warrios02.png';
+import Roupas from '/assets/img/roupas.jpg';
+import Casaco from '/assets/img/casaco.jpg';
+import DressOn from '/assets/img/dress1.jpg';
+import DressTw from '/assets/img/dress2.jpg';
+import DressTr from '/assets/img/dress3.jpg';
+import DressQ from '/assets/img/dress4.jpg';
+import GirlD from '/assets/img/girlDress.jpg';
+import RoupasD from '/assets/img/roupas2.jpg';
 
-const imageArray = [{
-  image: ChicagoBulls,
-  Description: "Camisa Chicago"
-},
-{
-  image: Lakers01,
-  Description: "Camisa Lakers"
-},
-{
-  image: Lakers02,
-  Description: "Camisa Lakers"
-},
-{
-  image: TSquad,
-  Description: "Camisa TSquad"
-},
-{
-  image: Warriors01,
-  Description: "Camisa Warriors"
-},
-{
-  image: Warriors02,
-  Description: "Camisa Warriors"
-}]
+const imageArray = [
+  {
+    image: Roupas,
+    Description: 'Camisa Chicago',
+  },
+  {
+    image: Casaco,
+    Description: 'Camisa Lakers',
+  },
+  {
+    image: DressQ,
+    Description: 'Camisa Chicago',
+  },
+  {
+    image: DressOn,
+    Description: 'Camisa Lakers',
+  },
+  {
+    image: DressTw,
+    Description: 'Camisa Lakers',
+  },
+  {
+    image: DressTr,
+    Description: 'Camisa TSquad',
+  },
+  {
+    image: GirlD,
+    Description: 'Camisa Warriors',
+  },
+  {
+    image: RoupasD,
+    Description: 'Camisa Warriors',
+  },
+];
 
-
-export default imageArray
+export default imageArray;

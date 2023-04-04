@@ -1,24 +1,86 @@
-import React from 'react'
-import tamanhos from '../assets/img/Tamanhos.png'
+import React from 'react';
+import DressOn from '/assets/img/dress1.jpg';
+import DressTw from '/assets/img/dress2.jpg';
+import DressTr from '/assets/img/dress3.jpg';
 
 export default function Jumbottron() {
   return (
-    <div className="container flex flex-col justify-center  shadow shadow-slate-500 rounded-md p-3 mt-3 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-      <div className="flex flex-col justify-center p-6 text-center  lg:max-w-md xl:max-w-lg lg:text-left">
-
-        <h3 className='text-xl font-bold leading-none sm:text-3xl'>Tamanhos de nossas camisas</h3>
-        <p className="mt-6 mb-8 text-lg sm:mb-12">Medidas aproximadas, podendo haver variação de 4cm -
-          <p className="hidden md:inline sm:hidden"> P, M, G, GG, XGG</p>
-        </p>
-        <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-          <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded dark:bg-orange-400 dark:text-gray-900">Recentes</a>
-          <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded bg-gradient-to-r from-orange-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">Comprar</a>
+    <div className="py-16">
+      <div className="container m-auto space-y-8 px-6 text-gray-500 md:px-12 lg:px-20">
+        <div
+          className="justify-center gap-6 text-center md:flex md:text-left lg:items-center
+         lg:gap-16"
+        >
+          <div className="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
+            <h1 className="text-4xl font-bold text-gray-800 md:text-5xl ">
+              Buy now and benefit up to{' '}
+              <span className="text-primary text-sky-300">30% off</span>
+            </h1>
+            <p className="text-lg text-gray-600 ">
+              Be part of millions people around the world using tailus in modern
+              User Interfaces.
+            </p>
+            <div className="flex flex-wrap gap-6">
+              <a
+                href="#"
+                className="relative flex h-12 w-full items-center justify-center px-8 
+                before:absolute before:inset-0 before:rounded-full before:bg-primary 
+                before:transition before:duration-300 hover:before:scale-105 
+                active:duration-75 active:before:scale-95 sm:w-max"
+              >
+                <span className="relative text-base font-semibold text-white ">
+                  Shop now
+                </span>
+              </a>
+              <a
+                href="#"
+                className="relative flex h-12 w-full items-center justify-center px-8
+                 before:absolute before:inset-0 before:rounded-full before:border
+                  before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b
+                   before:transition before:duration-300 hover:before:scale-105 
+                   active:duration-75 active:before:scale-95
+                     sm:w-max"
+              >
+                <span className="relative text-base font-semibold text-primary ">
+                  More about
+                </span>
+              </a>
+            </div>
+          </div>
+          <div className="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
+            <div className="col-span-2 row-span-4">
+              <img
+                src={DressOn}
+                className="rounded-full"
+                width="640"
+                height="960"
+                alt="shoes"
+                loading="lazy"
+              />
+            </div>
+            <div className="col-span-2 row-span-2">
+              <img
+                src={DressTw}
+                className="h-full w-full rounded-xl object-cover object-top"
+                width="640"
+                height="640"
+                alt="shoe"
+                loading="lazy"
+              />
+            </div>
+            <div className="col-span-3 row-span-3">
+              <img
+                src={DressTr}
+                className="h-full w-full rounded-xl object-cover object-top"
+                width="640"
+                height="427"
+                alt="shoes"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="flex items-center justify-center m-5 w-1/4 mx-auto rounded-lg overflow-hidden shadow-lg
-     shadow-gray-500 transform transition duration-150 hover:scale-110">
-        <img className="object-contain w-full" src={tamanhos} alt="Sunset in the mountains" />
-      </div>
     </div>
-  )
+  );
 }
