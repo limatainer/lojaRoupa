@@ -1,6 +1,6 @@
 import React from 'react';
-import darkYell from '/assets/img/blackyellow.jpg';
-import darkJeans from '/assets/img/jeans.jpg';
+import darkYell from '/assets/img/whiteDress.jpg';
+import darkJeans from '/assets/img/blueDress.jpg';
 import imageArray from '../utils/Fotos';
 
 export default function Cards() {

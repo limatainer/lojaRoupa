@@ -1,20 +1,28 @@
 import { useState } from 'react';
-import Logo from '/vite.svg';
+import Logo from '/DressFront.png';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
+    <div
+      className="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl 
+    md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+    >
+      <div
+        className="relative flex items-center justify-between
+       lg:justify-center lg:space-x-16"
+      >
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
             <a
               href="#"
               aria-label="Our product"
               title="Our product"
-              className="font-medium tracking-wide text-gray-700 
-              transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide
+               text-gray-700 
+              transition-colors duration-200 
+              hover:text-orange-200"
             >
               Store
             </a>
@@ -25,7 +33,8 @@ export default function Navbar() {
               aria-label="Our product"
               title="Our product"
               className="font-medium tracking-wide text-gray-700 
-              transition-colors duration-200 hover:text-deep-purple-accent-400"
+              transition-colors duration-200 
+              hover:text-orange-200"
             >
               Shop
             </a>
@@ -37,7 +46,10 @@ export default function Navbar() {
           title="Company"
           className="inline-flex items-center"
         >
-          <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+          <span
+            className="ml-2 text-xl font-bold tracking-wide
+           text-gray-800 uppercase"
+          >
             <img src={Logo} alt="logo" />
           </span>
         </a>
@@ -47,7 +59,7 @@ export default function Navbar() {
               href="/"
               aria-label="About us"
               title="About us"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
             >
               About
             </a>
@@ -57,7 +69,7 @@ export default function Navbar() {
               href="/"
               aria-label="Sign in"
               title="Sign in"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
             >
               Contact
             </a>
@@ -97,9 +109,9 @@ export default function Navbar() {
                       className="inline-flex items-center"
                     >
                       <img
-                        src={Lime}
+                        src={Logo}
                         alt="Lime"
-                        className="w-8 text-deep-purple-accent-400"
+                        className="w-8 text-orange-200"
                       />
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                         <img src={Logo} alt="logo" />
@@ -129,9 +141,9 @@ export default function Navbar() {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
                       >
-                        Cursos
+                        Store
                       </a>
                     </li>
                     <li>
@@ -139,9 +151,9 @@ export default function Navbar() {
                         href="/"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
                       >
-                        Formações
+                        Shop
                       </a>
                     </li>
                     <li>
@@ -149,9 +161,9 @@ export default function Navbar() {
                         href="/"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
                       >
-                        Artigos
+                        About
                       </a>
                     </li>
                     <li>
@@ -159,29 +171,9 @@ export default function Navbar() {
                         href="/"
                         aria-label="About us"
                         title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
                       >
-                        Quem Somos
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Sign in"
-                        title="Sign in"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Contato
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Reservar"
-                        title="Reservar"
-                      >
-                        Reservar
+                        Contact
                       </a>
                     </li>
                   </ul>

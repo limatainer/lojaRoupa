@@ -12,14 +12,14 @@ export default function CallAction() {
           className="text-3xl font-semibold leading-tight text-center
      lg:text-left"
         >
-          Nobis a dolores, quia sit ad quasi dolorem in?
+          Are you ready for the summer and are looking for the best dresses?
         </h1>
         <button
           className="px-8 py-3 text-lg font-semibold rounded
-          bg-orange-300 hover:bg-yellow-300
+          bg-dress-500 hover:bg-orange-200
      "
         >
-          Contact
+          Buy
         </button>
       </div>
     </section>

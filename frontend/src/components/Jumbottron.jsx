@@ -13,12 +13,11 @@ export default function Jumbottron() {
         >
           <div className="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
             <h1 className="text-4xl font-bold text-gray-800 md:text-5xl ">
-              Buy now and benefit up to{' '}
-              <span className="text-primary text-sky-300">30% off</span>
+              Shop now to get up to
+              <span className="text-primary text-dress-500"> 45% off</span>
             </h1>
             <p className="text-lg text-gray-600 ">
-              Be part of millions people around the world using tailus in modern
-              User Interfaces.
+              Get ready for the summer with good fabric from The Fabric store
             </p>
             <div className="flex flex-wrap gap-6">
               <a
@@ -42,7 +41,7 @@ export default function Jumbottron() {
                      sm:w-max"
               >
                 <span className="relative text-base font-semibold text-primary ">
-                  More about
+                  Go to Store
                 </span>
               </a>
             </div>
