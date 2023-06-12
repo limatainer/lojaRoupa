@@ -1,7 +1,7 @@
 import React from 'react';
 import tamanhos from '/assets/img/Tamanhos.png';
 
-export default function Jumbottron() {
+export default function Jumbotron() {
   return (
     <div className="container flex flex-col justify-center  shadow shadow-slate-500 rounded-md p-3 mt-3 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
       <div className="flex flex-col justify-center p-6 text-center  lg:max-w-md xl:max-w-lg lg:text-left">
