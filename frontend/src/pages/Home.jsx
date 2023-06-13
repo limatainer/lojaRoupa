@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 import {
   Navbar,
   Jumbotron,
@@ -10,12 +11,23 @@ import {
 } from '../components';
 
 export default function Home() {
+  const el = React.useRef(null);
+
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['<i>Welcome</i> to', 'The Fabric Store.'],
+      typeSpeed: 50,
+    });
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
   return (
     <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
       <Navbar />
       <h1 className="text-center text-5xl font-bold leading-none sm:text-6xl">
-        The
-        <span className="dark:text-dress-300"> Fabric</span>
+        <span ref={el} />
       </h1>
       <CallAction />
       <Banner />
