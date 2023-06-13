@@ -6,7 +6,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function Gallery() {
   return (
-    <section className="py-6">
+    <section id="gallery" className="py-6">
       <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
         {galeria.map((item, index) => (
           <LazyLoadImage

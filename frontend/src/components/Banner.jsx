@@ -20,13 +20,14 @@ export default function Banner() {
             </span>
             <span className="font-bold text-lg">DRESS</span>
           </div>
-          <button
+          <a
+            href="#shop"
             className="flex items-center justify-center
            font-semibold rounded p-2 bg-dress-500 hover:bg-orange-200"
           >
             <BiShoppingBag className="mr-2" />
             <span>Shop Now</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>

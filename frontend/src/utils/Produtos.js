@@ -4,6 +4,8 @@ import DressTw from '/assets/dresses/pinkD.jpg';
 import DressTr from '/assets/dresses/pinkFlowerD.jpg';
 import DressQ from '/assets/dresses/shortVerde.jpg';
 import GirlD from '/assets/dresses/whiteFlowerD.jpg';
+import FancyD from '/assets/dresses/fancyD.jpg';
+import Pink from '/assets/dresses/pinkLongD.jpg';
 
 const products = [
   {
@@ -41,6 +43,18 @@ const products = [
     id: 6,
     Price: '45€',
     image: GirlD,
+    Description: 'Model 1',
+  },
+  {
+    id: 7,
+    Price: '45€',
+    image: Pink,
+    Description: 'Model 1',
+  },
+  {
+    id: 8,
+    Price: '45€',
+    image: FancyD,
     Description: 'Model 1',
   }
 ];

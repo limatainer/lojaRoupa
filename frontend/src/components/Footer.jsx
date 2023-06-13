@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '/DressFront.png';
 export default function Footer() {
   return (
-    <footer className=" py-4">
+    <footer id="contact" className=" py-4">
       <div className="container mx-auto flex justify-center">
         <img
           src={Logo}

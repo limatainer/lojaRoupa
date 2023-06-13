@@ -11,8 +11,8 @@ import {
 } from '../components';
 
 export default function Home() {
+  //======= Text animation for the store name
   const el = React.useRef(null);
-
   React.useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ['<i>Welcome</i> to', 'The Fabric Store.'],
@@ -23,6 +23,7 @@ export default function Home() {
       typed.destroy();
     };
   }, []);
+
   return (
     <div className="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
       <Navbar />
