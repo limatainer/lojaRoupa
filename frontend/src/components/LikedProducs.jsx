@@ -1,6 +1,10 @@
 import React from 'react';
+import { RiDeleteBin6Line } from 'react-icons/ri';
 
-const LikedProducts = ({ clickedProducts }) => {
+const LikedProducts = ({ clickedProducts, onDelete }) => {
+  const handleDelete = (id) => {
+    onDelete(id);
+  };
   return (
     <div className="text-center">
       <h2>Wish list</h2>
@@ -13,8 +17,15 @@ const LikedProducts = ({ clickedProducts }) => {
               alt={product.description}
               className="hover:grow hover:shadow-lg object-cover w-full aspect-square"
             />
-            <p className="text-gray-800 font-bold">{product.description}</p>
             <p className="text-gray-500">ID: {product.id}</p>
+            <p className="text-gray-800 font-bold">{product.description}</p>
+            <button
+              className="bg-orange-200 hover:bg-orange-100 
+            shadow-md rounded-md p-2 m-2"
+              onClick={() => handleDelete(product.id)}
+            >
+              <RiDeleteBin6Line />
+            </button>
           </div>
         ))}
       </div>

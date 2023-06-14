@@ -26,9 +26,14 @@ export default function Products() {
     setLiked(true);
     swal('Liked!', 'This product was added to your wish list', 'success');
   };
+
   const handleLikedSearch = (e) => {
     e.preventDefault();
     setLikedSearch(true);
+  };
+
+  const deleteProduct = (id) => {
+    setClickedProducts(clickedProducts.filter((product) => product.id !== id));
   };
 
   return (
@@ -39,6 +44,7 @@ export default function Products() {
             <a
               className="tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
               href="#shop"
+              onClick={() => setLikedSearch(false)}
             >
               Latest Products
             </a>
@@ -63,7 +69,10 @@ export default function Products() {
           </div>
         </nav>
         {likedSearch ? (
-          <LikedProducts clickedProducts={clickedProducts} />
+          <LikedProducts
+            clickedProducts={clickedProducts}
+            onDelete={deleteProduct}
+          />
         ) : (
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4">
             {produtos.map((produto) => (
