@@ -7,6 +7,7 @@ import {
   Banner,
   Products,
   Gallery,
+  BackToTop,
   Footer,
 } from '../components';
 
@@ -55,6 +56,7 @@ export default function Home() {
         Shop Now
       </p>
       <Products />
+      <BackToTop />
       <Footer />
     </div>
   );

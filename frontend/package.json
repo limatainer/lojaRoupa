@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
     "react-lazy-load-image-component": "^1.6.0",
+    "sweetalert": "^2.1.2",
     "typed.js": "^2.0.16"
   },
   "devDependencies": {

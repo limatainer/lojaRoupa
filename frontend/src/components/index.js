@@ -5,6 +5,7 @@ import Jumbotron from './Jumbotron'
 import CallAction from './CallAction'
 import Banner from './Banner'
 import Products from './Products'
+import BackToTop from './BackToTop'
 
 export {
   Navbar,
@@ -13,5 +14,6 @@ export {
   Gallery,
   Banner,
   CallAction,
+  BackToTop,
   Footer
 }
