@@ -5,13 +5,18 @@ const LikedProducts = ({ clickedProducts, onDelete }) => {
   const handleDelete = (id) => {
     onDelete(id);
   };
+
   return (
     <div className="text-center">
       <h2>Wish list</h2>
       <p>Liked products</p>
+
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4">
-        {clickedProducts.map((product) => (
-          <div key={product.id} className="bg-white p-6 shadow-md">
+        {clickedProducts.map((product, index) => (
+          <div
+            key={`${product.id}-${index}`}
+            className="bg-white p-6 shadow-md"
+          >
             <img
               src={product.image}
               alt={product.description}

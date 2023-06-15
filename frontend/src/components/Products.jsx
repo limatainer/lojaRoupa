@@ -19,12 +19,22 @@ export default function Products() {
 
   const handleLikeClick = (e, produto) => {
     e.preventDefault();
-    setClickedProducts((prevClickedProducts) => [
-      ...prevClickedProducts,
-      produto,
-    ]);
-    setLiked(true);
-    swal('Liked!', 'This product was added to your wish list', 'success');
+
+    // Check if the product is already clicked
+    const isProductClicked = clickedProducts.some(
+      (product) => product.id === produto.id
+    );
+
+    if (!isProductClicked) {
+      setClickedProducts((prevClickedProducts) => [
+        ...prevClickedProducts,
+        produto,
+      ]);
+      setLiked(true);
+      swal('Liked!', 'This product was added to your wish list', 'success');
+    } else {
+      swal('Already Liked!', 'You have already liked this product', 'info');
+    }
   };
 
   const handleLikedSearch = (e) => {
@@ -33,7 +43,28 @@ export default function Products() {
   };
 
   const deleteProduct = (id) => {
-    setClickedProducts(clickedProducts.filter((product) => product.id !== id));
+    swal({
+      title: 'Are you sure?',
+      text: 'Once deleted, you will need to look for this product on our store again',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        swal('Poof! Your favorite product was deleted!', {
+          icon: 'success',
+        });
+        setClickedProducts(
+          clickedProducts.filter((product) => product.id !== id)
+        );
+        if (clickedProducts.length <= 1) {
+          setLikedSearch(false);
+          setLiked(false);
+        }
+      } else {
+        swal('Your favorite product is safe!');
+      }
+    });
   };
 
   return (
