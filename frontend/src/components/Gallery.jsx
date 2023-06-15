@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import galeria from '../utils/Galeria';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import LazyLoad from 'react-lazyload';
 import placeholderImage from '/placeholder.png';
 
@@ -14,9 +15,7 @@ export default function Gallery() {
       <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
         {galeria.map((item, index) => (
           <div key={index}>
-            {!loadedIndexes.includes(index) && (
-              <img src={placeholderImage} alt="Placeholder" />
-            )}
+            {!loadedIndexes.includes(index) && <AiOutlineLoading3Quarters />}
             <LazyLoad key={index} alt="" className={`${item.classe}`} once>
               <img
                 src={item.image}

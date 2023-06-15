@@ -1,8 +1,9 @@
 import React from 'react';
-import DressOn from '/assets/gallery/whiteD.jpg';
-import DressTw from '/assets/gallery/whiteShort.jpg';
 
 import LazyLoad from 'react-lazyload';
+
+import DressOn from '/assets/gallery/whiteD.jpg';
+import DressTw from '/assets/gallery/whiteShort.jpg';
 
 export default function Jumbotron() {
   return (
@@ -11,20 +12,24 @@ export default function Jumbotron() {
         <div className="flex flex-col justify-center gap-6 text-center md:flex-row md:text-left lg:items-center lg:gap-16">
           <div className="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
             <div className="col-span-2 row-span-2">
-              <LazyLoad
-                src={DressTw}
-                className="h-full w-full rounded-xl object-cover object-top"
-                alt="shoe"
-                loading="lazy"
-              />
+              <LazyLoad>
+                <img
+                  src={DressTw}
+                  className="h-full w-full rounded-xl object-cover object-top"
+                  alt="shoe"
+                  loading="lazy"
+                />
+              </LazyLoad>
             </div>
             <div className="col-span-3 row-span-3">
-              <LazyLoad
-                src={DressOn}
-                className="h-full w-full rounded-xl object-cover object-top"
-                alt="shoes"
-                loading="lazy"
-              />
+              <LazyLoad>
+                <img
+                  src={DressOn}
+                  className="h-full w-full rounded-xl object-cover object-top"
+                  alt="shoes"
+                  loading="lazy"
+                />
+              </LazyLoad>
             </div>
           </div>
           {/* start Right */}

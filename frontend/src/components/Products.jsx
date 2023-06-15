@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import produtos from '../utils/Produtos';
 import HeartIcon from '../constant/Heart';
 import LikedProducts from '../components/LikedProducs';
-import placeholderImage from '/placeholder.png';
 
 import LazyLoad from 'react-lazyload';
 
 import { BiFilterAlt } from 'react-icons/bi';
 import { BsSearchHeart } from 'react-icons/bs';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 import swal from 'sweetalert';
 
@@ -116,9 +116,7 @@ export default function Products() {
               <div key={produto.id} className="p-6">
                 <a href="#shop" className="flex flex-col">
                   <div className="mb-4">
-                    {!isLoaded && (
-                      <img src={placeholderImage} alt="Placeholder" />
-                    )}
+                    {!isLoaded && <AiOutlineLoading3Quarters />}
                     <LazyLoad>
                       <img
                         className="hover:grow hover:shadow-lg object-cover w-full aspect-square"
