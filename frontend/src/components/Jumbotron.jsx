@@ -2,9 +2,7 @@ import React from 'react';
 import DressOn from '/assets/gallery/whiteD.jpg';
 import DressTw from '/assets/gallery/whiteShort.jpg';
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import LazyLoad from 'react-lazyload';
 
 export default function Jumbotron() {
   return (
@@ -13,7 +11,7 @@ export default function Jumbotron() {
         <div className="flex flex-col justify-center gap-6 text-center md:flex-row md:text-left lg:items-center lg:gap-16">
           <div className="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
             <div className="col-span-2 row-span-2">
-              <LazyLoadImage
+              <LazyLoad
                 src={DressTw}
                 className="h-full w-full rounded-xl object-cover object-top"
                 alt="shoe"
@@ -21,7 +19,7 @@ export default function Jumbotron() {
               />
             </div>
             <div className="col-span-3 row-span-3">
-              <LazyLoadImage
+              <LazyLoad
                 src={DressOn}
                 className="h-full w-full rounded-xl object-cover object-top"
                 alt="shoes"

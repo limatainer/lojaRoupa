@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import produtos from '../utils/Produtos';
 import HeartIcon from '../constant/Heart';
 import LikedProducts from '../components/LikedProducs';
+import placeholderImage from '/placeholder.png';
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import LazyLoad from 'react-lazyload';
 
 import { BiFilterAlt } from 'react-icons/bi';
 import { BsSearchHeart } from 'react-icons/bs';
@@ -16,6 +16,12 @@ export default function Products() {
   const [likedSearch, setLikedSearch] = useState(false);
 
   const [clickedProducts, setClickedProducts] = useState([]);
+
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsLoaded(true);
+  };
 
   const handleLikeClick = (e, produto) => {
     e.preventDefault();
@@ -110,11 +116,18 @@ export default function Products() {
               <div key={produto.id} className="p-6">
                 <a href="#shop" className="flex flex-col">
                   <div className="mb-4">
-                    <LazyLoadImage
-                      className="hover:grow hover:shadow-lg object-cover w-full aspect-square"
-                      src={produto.image}
-                      alt={produto.Description}
-                    />
+                    {!isLoaded && (
+                      <img src={placeholderImage} alt="Placeholder" />
+                    )}
+                    <LazyLoad>
+                      <img
+                        className="hover:grow hover:shadow-lg object-cover w-full aspect-square"
+                        src={produto.image}
+                        alt={produto.Description}
+                        onLoad={handleImageLoad}
+                        style={{ display: isLoaded ? 'block' : 'none' }}
+                      />
+                    </LazyLoad>
                   </div>
                   <div className="flex items-center justify-between">
                     <p>{produto.Description}</p>
