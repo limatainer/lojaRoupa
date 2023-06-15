@@ -11,12 +11,16 @@ export default function Gallery() {
   };
   return (
     <section id="gallery" className="py-6 m-8 ">
-      <div className="container grid grid-cols-2 gap-4 p-4 m-8 mx-auto md:grid-cols-4 border border-yellow-900">
+      <div
+        className="container grid grid-cols-2 gap-4 p-4 m-8
+       mx-auto md:grid-cols-4"
+      >
         {galeria.map((item, index) => (
-          <div key={index} className="m-2">
+          <div key={index}>
             {!loadedIndexes.includes(index) && <AiOutlineLoading3Quarters />}
-            <LazyLoad key={index} alt="" className={`${item.classe}`} once>
+            <LazyLoad key={index} alt="" once>
               <img
+                className={`${item.classe}`}
                 src={item.image}
                 alt={item.alt}
                 onLoad={() => handleImageLoad(index)}
