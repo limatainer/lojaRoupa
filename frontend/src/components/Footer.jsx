@@ -3,12 +3,27 @@ import Logo from '/DressFront.png';
 export default function Footer() {
   return (
     <footer id="contact" className=" py-4">
-      <div className="container mx-auto flex justify-center">
+      <div
+        className="container mx-auto flex items-center 
+      justify-center m-2 p-2"
+      >
+        <p>
+          Mail: thefactory@fact.com
+          <br />
+          Europe based online store
+        </p>
         <img
           src={Logo}
           alt="logo"
-          className="h-8 w-8 md:h-12 md:w-12 lg:h-16 lg:w-16"
+          className="h-8 w-8 mx-12 md:h-12 md:w-12 lg:h-16 lg:w-16"
         />
+        <p>
+          Mon-Fry
+          <br />
+          Sat - till 20pm
+          <br />
+          Sun - till 15pm
+        </p>
       </div>
     </footer>
   );
