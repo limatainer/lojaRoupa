@@ -18,7 +18,7 @@ export default function Gallery() {
         {galeria.map((item, index) => (
           <div key={index}>
             {!loadedIndexes.includes(index) && <AiOutlineLoading3Quarters />}
-            <LazyLoad key={index} alt="" once>
+            <LazyLoad key={index} alt="" once height={200} offset={100}>
               <img
                 className={`${item.classe}`}
                 src={item.image}

@@ -117,7 +117,7 @@ export default function Products() {
                 <a href="#shop" className="flex flex-col">
                   <div className="mb-4">
                     {!isLoaded && <AiOutlineLoading3Quarters />}
-                    <LazyLoad>
+                    <LazyLoad height={200} offset={100}>
                       <img
                         className="hover:grow hover:shadow-lg object-cover w-full aspect-square"
                         src={produto.image}
