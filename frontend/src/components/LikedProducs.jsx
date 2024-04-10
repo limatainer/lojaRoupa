@@ -8,8 +8,7 @@ const LikedProducts = ({ clickedProducts, onDelete }) => {
 
   return (
     <div className="text-center">
-      <h2>Wish list</h2>
-      <p>Liked products</p>
+      <h2 className="text-2xl font-bold">Wish list</h2>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4">
         {clickedProducts.map((product, index) => (

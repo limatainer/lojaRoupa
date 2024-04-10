@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import produtos from '../utils/Produtos';
-import HeartIcon from '../constant/Heart';
+
 import LikedProducts from '../components/LikedProducs';
-import { BiFilterAlt } from 'react-icons/bi';
 import { BsSearchHeart } from 'react-icons/bs';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { IoIosHeart, IoMdHeartEmpty } from 'react-icons/io';
+import { MdOutlineStorefront } from 'react-icons/md';
+import { MdOutlineLocalGroceryStore } from 'react-icons/md';
+
 import swal from 'sweetalert';
 
 export default function Products() {
@@ -79,15 +81,15 @@ export default function Products() {
               href="#shop"
               onClick={() => setLikedSearch(false)}
             >
-              Latest Products
+              <MdOutlineStorefront className="icones" />
             </a>
-
+            <h2 className="text-3xl font-bold">Latest Products</h2>
             <div className="flex items-center" id="store-nav-content">
               <a
                 className="pl-3 inline-block no-underline hover:text-black"
                 href="#shop"
               >
-                <BiFilterAlt className="icones" />
+                <MdOutlineLocalGroceryStore className="icones" />
               </a>
               {liked && (
                 <a

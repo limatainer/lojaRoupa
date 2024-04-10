@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Logo from '/DressFront.png';
 import Closed from '../constant/Closed';
 import Menu from '../constant/Menu';
 
@@ -48,7 +47,10 @@ export default function Navbar() {
           className="inline-flex items-center"
         >
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-            <img src={Logo} alt="logo" />
+            <img
+              src="https://raw.githubusercontent.com/limatainer/images/main/DressFront.png"
+              alt="logo"
+            />
           </span>
         </a>
         <ul className=" items-center hidden space-x-8 lg:flex">
@@ -96,12 +98,15 @@ export default function Navbar() {
                       className="inline-flex items-center"
                     >
                       <img
-                        src={Logo}
+                        src="https://raw.githubusercontent.com/limatainer/images/main/DressFront.png"
                         alt="Lime"
                         className="w-8 text-orange-200"
                       />
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        <img src={Logo} alt="logo" />
+                        <img
+                          src="https://raw.githubusercontent.com/limatainer/images/main/DressFront.png"
+                          alt="logo"
+                        />
                       </span>
                     </a>
                   </div>

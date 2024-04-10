@@ -1,8 +1,5 @@
 import React from 'react';
 
-import DressOn from '/assets/gallery/whiteD.jpg';
-import DressTw from '/assets/gallery/whiteShort.jpg';
-
 export default function Jumbotron() {
   return (
     <div className="py-16">
@@ -11,7 +8,7 @@ export default function Jumbotron() {
           <div className="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
             <div className="col-span-2 row-span-2">
               <img
-                src={DressTw}
+                src="https://raw.githubusercontent.com/limatainer/images/main/whiteShort.jpg"
                 className="h-full w-full rounded-xl object-cover object-top"
                 alt="shoe"
                 loading="lazy"
@@ -19,7 +16,7 @@ export default function Jumbotron() {
             </div>
             <div className="col-span-3 row-span-3">
               <img
-                src={DressOn}
+                src="https://raw.githubusercontent.com/limatainer/images/main/whiteD.jpg"
                 className="h-full w-full rounded-xl object-cover object-top"
                 alt="shoes"
                 loading="lazy"

@@ -36,7 +36,7 @@ export default function Home() {
       <Banner />
       <Jumbotron />
       <p
-        className="m-5 animate-text bg-gradient-to-r
+        className="text-center m-5 animate-text bg-gradient-to-r
        from-dress-300 via-dress-500 to-dress-600 
        bg-clip-text text-transparent text-5xl font-black"
       >
@@ -49,13 +49,13 @@ export default function Home() {
         Top Dresses & Design
       </p>
       <Gallery />
-      <p
-        className="m-5 animate-text bg-gradient-to-r
+      <h1
+        className="text-center m-5 animate-text bg-gradient-to-r
        from-dress-300 via-dress-500 to-dress-600 
        bg-clip-text text-transparent text-5xl font-black"
       >
         Shop Now
-      </p>
+      </h1>
       <Products />
       <BackToTop />
       <Footer />
