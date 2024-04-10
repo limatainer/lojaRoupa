@@ -1,62 +1,60 @@
-import Casaco from '/assets/dresses/casaco.jpg';
-import DressOn from '/assets/dresses/greenD.jpg';
-import DressTw from '/assets/dresses/pinkD.jpg';
-import DressTr from '/assets/dresses/pinkFlowerD.jpg';
-import DressQ from '/assets/dresses/shortVerde.jpg';
-import GirlD from '/assets/dresses/whiteFlowerD.jpg';
-import FancyD from '/assets/dresses/fancyD.jpg';
-import Pink from '/assets/dresses/pinkLongD.jpg';
-
 const products = [
   {
     id: 1,
     Price: '45€',
-    image: DressOn,
+    image:
+      'https://raw.githubusercontent.com/limatainer/images/main/greenD.jpg',
     Description: 'Second hand surprise',
   },
   {
     id: 2,
     Price: '45€',
-    image: Casaco,
+    image:
+      'https://raw.githubusercontent.com/limatainer/images/main/casaco.jpg',
     Description: 'Jacket',
   },
   {
     id: 3,
     Price: '45€',
-    image: DressQ,
+    image:
+      'https://raw.githubusercontent.com/limatainer/images/main/shortVerde.jpg',
     Description: 'Dress M',
   },
-  
+
   {
     id: 4,
     Price: '45€',
-    image: DressTw,
+    image: 'https://raw.githubusercontent.com/limatainer/images/main/pinkD.jpg',
     Description: 'Dress S',
   },
   {
     id: 5,
     Price: '45€',
-    image: DressTr,
+    image:
+      'https://raw.githubusercontent.com/limatainer/images/main/pinkFlowerD.jpg',
     Description: 'Dress XL',
   },
   {
     id: 6,
     Price: '45€',
-    image: GirlD,
+    image:
+      'https://raw.githubusercontent.com/limatainer/images/main/whiteFlowerD.jpg',
     Description: 'Model 1',
   },
   {
     id: 7,
     Price: '45€',
-    image: Pink,
+    image:
+      'https://raw.githubusercontent.com/limatainer/images/main/pinkLongD.jpg',
     Description: 'Model 1',
   },
   {
     id: 8,
     Price: '45€',
-    image: FancyD,
+    image:
+      'https://raw.githubusercontent.com/limatainer/images/main/fancyD.jpg',
     Description: 'Model 1',
-  }
+  },
 ];
 
 export default products;

@@ -2,21 +2,16 @@ import React, { useState } from 'react';
 import produtos from '../utils/Produtos';
 import HeartIcon from '../constant/Heart';
 import LikedProducts from '../components/LikedProducs';
-
-import LazyLoad from 'react-lazyload';
-
 import { BiFilterAlt } from 'react-icons/bi';
 import { BsSearchHeart } from 'react-icons/bs';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-
+import { IoIosHeart, IoMdHeartEmpty } from 'react-icons/io';
 import swal from 'sweetalert';
 
 export default function Products() {
   const [liked, setLiked] = useState(false);
   const [likedSearch, setLikedSearch] = useState(false);
-
   const [clickedProducts, setClickedProducts] = useState([]);
-
   const [isLoaded, setIsLoaded] = useState(false);
 
   const handleImageLoad = () => {
@@ -26,10 +21,7 @@ export default function Products() {
   const handleLikeClick = (e, produto) => {
     e.preventDefault();
 
-    // Check if the product is already clicked
-    const isProductClicked = clickedProducts.some(
-      (product) => product.id === produto.id
-    );
+    const isProductClicked = clickedProducts.some((p) => p.id === produto.id);
 
     if (!isProductClicked) {
       setClickedProducts((prevClickedProducts) => [
@@ -39,7 +31,11 @@ export default function Products() {
       setLiked(true);
       swal('Liked!', 'This product was added to your wish list', 'success');
     } else {
-      swal('Already Liked!', 'You have already liked this product', 'info');
+      const updatedProducts = clickedProducts.filter(
+        (p) => p.id !== produto.id
+      );
+      setClickedProducts(updatedProducts);
+      swal('Unliked!', 'This product was removed from your wish list', 'info');
     }
   };
 
@@ -91,7 +87,7 @@ export default function Products() {
                 className="pl-3 inline-block no-underline hover:text-black"
                 href="#shop"
               >
-                <BiFilterAlt />
+                <BiFilterAlt className="icones" />
               </a>
               {liked && (
                 <a
@@ -99,7 +95,7 @@ export default function Products() {
                   href="#shop"
                   onClick={(e) => handleLikedSearch(e)}
                 >
-                  <BsSearchHeart />
+                  <BsSearchHeart className="icones" />
                 </a>
               )}
             </div>
@@ -117,22 +113,24 @@ export default function Products() {
                 <a href="#shop" className="flex flex-col">
                   <div className="mb-4">
                     {!isLoaded && <AiOutlineLoading3Quarters />}
-                    <LazyLoad height={200} offset={100}>
-                      <img
-                        className="hover:grow hover:shadow-lg object-cover w-full aspect-square"
-                        src={produto.image}
-                        alt={produto.Description}
-                        onLoad={handleImageLoad}
-                        style={{ display: isLoaded ? 'block' : 'none' }}
-                      />
-                    </LazyLoad>
+                    <img
+                      className="hover:grow hover:shadow-lg object-cover w-full aspect-square"
+                      src={produto.image}
+                      alt={produto.Description}
+                      onLoad={handleImageLoad}
+                      style={{ display: isLoaded ? 'block' : 'none' }}
+                    />
                   </div>
                   <div className="flex items-center justify-between">
                     <p>{produto.Description}</p>
                     <div className="flex items-center">
                       <p className="pt-1 text-gray-900">€{produto.Price}</p>
                       <button onClick={(e) => handleLikeClick(e, produto)}>
-                        <HeartIcon />
+                        {clickedProducts.some((p) => p.id === produto.id) ? (
+                          <IoIosHeart className="icones" />
+                        ) : (
+                          <IoMdHeartEmpty className="icones" />
+                        )}
                       </button>
                     </div>
                   </div>

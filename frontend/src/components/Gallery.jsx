@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import galeria from '../utils/Galeria';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-import LazyLoad from 'react-lazyload';
 
 export default function Gallery() {
   const [loadedIndexes, setLoadedIndexes] = useState([]);
@@ -18,14 +17,12 @@ export default function Gallery() {
         {galeria.map((item, index) => (
           <div key={index}>
             {!loadedIndexes.includes(index) && <AiOutlineLoading3Quarters />}
-            <LazyLoad key={index} alt="" once height={200} offset={100}>
-              <img
-                className={`${item.classe}`}
-                src={item.image}
-                alt={item.alt}
-                onLoad={() => handleImageLoad(index)}
-              />
-            </LazyLoad>
+            <img
+              className={`${item.classe}`}
+              src={item.image}
+              alt={item.alt}
+              onLoad={() => handleImageLoad(index)}
+            />
           </div>
         ))}
       </div>

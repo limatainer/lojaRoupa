@@ -5,26 +5,26 @@ import Menu from '../constant/Menu';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const handleScrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
   return (
-    <div
-      className="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl 
-    md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
-    >
-      <div
-        className="relative flex items-center justify-between
-       lg:justify-center lg:space-x-16"
-      >
-        <ul className="flex items-center hidden space-x-8 lg:flex">
+    <div className="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
+        <ul className=" items-center hidden space-x-8 lg:flex">
           <li>
             <a
               href="#gallery"
               aria-label="Our product"
               title="Our product"
-              className="font-medium tracking-wide
-               text-gray-700 
-              transition-colors duration-200 
-              hover:text-orange-200"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
+              onClick={() => handleScrollToSection('gallery')}
             >
               Gallery
             </a>
@@ -34,9 +34,8 @@ export default function Navbar() {
               href="#shop"
               aria-label="Our product"
               title="Our product"
-              className="font-medium tracking-wide text-gray-700 
-              transition-colors duration-200 
-              hover:text-orange-200"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
+              onClick={() => handleScrollToSection('shop')}
             >
               Shop
             </a>
@@ -48,20 +47,18 @@ export default function Navbar() {
           title="Company"
           className="inline-flex items-center"
         >
-          <span
-            className="ml-2 text-xl font-bold tracking-wide
-           text-gray-800 uppercase"
-          >
+          <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
             <img src={Logo} alt="logo" />
           </span>
         </a>
-        <ul className="flex items-center hidden space-x-8 lg:flex">
+        <ul className=" items-center hidden space-x-8 lg:flex">
           <li>
             <a
               href="#about"
               aria-label="About us"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
+              onClick={() => handleScrollToSection('about')}
             >
               About
             </a>
@@ -72,6 +69,7 @@ export default function Navbar() {
               aria-label="Sign in"
               title="Sign in"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
+              onClick={() => handleScrollToSection('contact')}
             >
               Contact
             </a>
@@ -126,6 +124,7 @@ export default function Navbar() {
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
+                        onClick={() => handleScrollToSection('gallery')}
                       >
                         Gallery
                       </a>
@@ -136,26 +135,29 @@ export default function Navbar() {
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
+                        onClick={() => handleScrollToSection('shop')}
                       >
                         Shop
                       </a>
                     </li>
                     <li>
                       <a
-                        href="/about"
+                        href="#about"
                         aria-label="Product pricing"
                         title="Product pricing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
+                        onClick={() => handleScrollToSection('about')}
                       >
                         About
                       </a>
                     </li>
                     <li>
                       <a
-                        href="/contact"
+                        href="#contact"
                         aria-label="About us"
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-200"
+                        onClick={() => handleScrollToSection('contact')}
                       >
                         Contact
                       </a>

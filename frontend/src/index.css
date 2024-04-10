@@ -1,16 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-  padding : 0;
-  margin:0;
-  box-sizing: border-box;
-  font-family: 'Work Sans', sans-serif
-}
 
-p{
-  text-align:center;
-}
-a{
-  text-decoration:none;
+.icones {
+  @apply text-2xl font-bold m-2;
 }
