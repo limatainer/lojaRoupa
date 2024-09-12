@@ -8,7 +8,7 @@ export default function Jumbotron() {
           <div className="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
             <div className="col-span-2 row-span-2">
               <img
-                src="https://raw.githubusercontent.com/limatainer/images/main/whiteShort.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/imageni.appspot.com/o/vestidos%2FwhiteShort.jpg?alt=media&token=96262097-1d30-4c6c-b44f-74381340f346"
                 className="h-full w-full rounded-xl object-cover object-top"
                 alt="shoe"
                 loading="lazy"
@@ -16,7 +16,7 @@ export default function Jumbotron() {
             </div>
             <div className="col-span-3 row-span-3">
               <img
-                src="https://raw.githubusercontent.com/limatainer/images/main/whiteD.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/imageni.appspot.com/o/vestidos%2FwhiteD.jpg?alt=media&token=b460ff69-d62b-4574-8829-546cefc6c96a"
                 className="h-full w-full rounded-xl object-cover object-top"
                 alt="shoes"
                 loading="lazy"

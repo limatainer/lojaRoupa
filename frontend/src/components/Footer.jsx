@@ -12,7 +12,7 @@ export default function Footer() {
           Europe based online store
         </p>
         <img
-          src="https://raw.githubusercontent.com/limatainer/images/main/DressFront.png"
+          src="https://firebasestorage.googleapis.com/v0/b/imageni.appspot.com/o/vestidos%2FDress%20Frontpng.png?alt=media&token=a7edf735-3618-4dc1-be6a-520ded024122"
           alt="logo"
           className="h-8 w-8 mx-12 md:h-12 md:w-12 lg:h-16 lg:w-16"
         />

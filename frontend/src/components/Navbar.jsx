@@ -48,7 +48,7 @@ export default function Navbar() {
         >
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
             <img
-              src="https://raw.githubusercontent.com/limatainer/images/main/DressFront.png"
+              src="https://firebasestorage.googleapis.com/v0/b/imageni.appspot.com/o/vestidos%2FDress%20Frontpng.png?alt=media&token=a7edf735-3618-4dc1-be6a-520ded024122"
               alt="logo"
             />
           </span>
